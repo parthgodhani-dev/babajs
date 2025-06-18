@@ -31,6 +31,27 @@ const myTime = new Date();
 // console.log(myTime.toTimeString(myTime.getTime()));
 
 
+const myDate = new Date();
+
+console.log(Date.now()/1000);
+
+
+const myDate = new Date();
+
+// console.log(Date.now()/1000);
+
+
+console.log(
+    myDate.toLocaleString("default", {
+    // month : "2-digit",
+    // month : "long",
+    // month : "narrow",
+    // month : "numeric",
+    // month : "short"
+    })
+);
+
+
 /*
 | **Method**               | **Description**                          | **Example Code**                          | **Output Example**                      |
 | ------------------------ | ---------------------------------------- | ----------------------------------------- | --------------------------------------- |
