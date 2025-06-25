@@ -75,3 +75,27 @@ test();
 })("Baba");
 
 
+// #1 Positive or Negative
+const num = -88;
+num > 0 ? console.log(`✅ Positive`) : console.log(`❌ Negative`);
+
+
+// #2 Even or Odd
+const num1 = 88;
+let result = num1 % 2
+result === 0 ? console.log(`even`) : console.log(`Odd`);
+
+// #3 User Login Status
+const isLoggedIn = true;
+isLoggedIn === true ? console.log("Welcome back!") : console.log("Please log in");
+
+
+// #4 Driving Eligibility
+const Eligibility = 18;
+Eligibility  >= 18 ? console.log("You can drive") : console.log("You cannot drive");
+
+// #5 Max of Two Numbers
+let a = 5;
+let b = 5;
+
+a > b ? console.log("First is greater") : a < b ? console.log("Second is greater") : console.log("Both are equal");

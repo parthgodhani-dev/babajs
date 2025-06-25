@@ -124,16 +124,16 @@ const myObj = {
 
 // ==============================================================Destructuring
 
-const userDetails = {
-    Id : "1u83y37",
-    Email : "baba@gmail.com",
-    Name : "Baba",
-    Bike : "RE-350"
-}
+// const userDetails = {
+//     Id : "1u83y37",
+//     Email : "baba@gmail.com",
+//     Name : "Baba",
+//     Bike : "RE-350"
+// }
 
-console.log(userDetails.Bike); 
-const {Id, Email: Em} = userDetails
-console.log(Id ,Em);
+// console.log(userDetails.Bike); 
+// const {Id, Email: Em} = userDetails
+// console.log(Id ,Em);
 
 
 
@@ -156,3 +156,44 @@ console.log(Id ,Em);
 
 
 */
+
+
+
+// from chatGPT
+
+// #1 
+let person = {
+    name : "Baba", 
+    age : 30, 
+    city : "ambd", 
+    isStudent : false
+}
+
+console.log(person.name);
+console.log(person.age);
+console.log(person.city); 
+console.log(person.isStudent);
+
+// #2
+console.log(person["city"]); 
+
+
+// #3
+person.email = "Baba@gmail.com";
+person.age =  person.age + 1;
+
+console.log(person)
+
+
+// #5
+const user = {
+  id: "U001",
+  name: "Parth",
+  contact: {
+    email: "parth@mail.com",
+    phone: "1234567890"
+  }
+}
+
+console.log(user.contact.phone);
+
