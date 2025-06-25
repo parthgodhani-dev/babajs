@@ -55,3 +55,88 @@
 
 // console.log(result);
 
+
+
+// ============================================== Map mathod
+
+// let myArr = [1,2,3,4,5,6,7,8,9,10]
+
+// let myNum = myArr.map((num) => (num + 100))
+// console.log(myNum);
+
+// ---------------- map chaing
+// let myNum = myArr
+//             .map((num) => (num + 10))
+//             .map((num) => (num + 90))
+//             .map((num) => (num * 100))
+// console.log(myNum);
+
+
+
+
+// ============================================== filter mathod
+
+// let myProduct = [
+//     {SKU : "prod-0", price : 210, status : "cart"},
+//     {SKU : "prod-1", price : 120, status : "cart"},
+//     {SKU : "prod-2", price : 250, status : "wishlist"},
+//     {SKU : "prod-3", price : 100, status : "cart"},
+//     {SKU : "prod-4", price : 450, status : "cart"},
+//     {SKU : "prod-5", price : 300, status : "cart"},
+//     {SKU : "prod-6", price : 420, status : "wishlist"},
+//     {SKU : "prod-7", price : 260, status : "cart"},
+//     {SKU : "prod-8", price : 390, status : "cart"},
+//     {SKU : "prod-9", price : 500, status : "wishlist"}
+// ]
+
+// let lowestPrice = myProduct.filter((item)=>(item.price <= 300))
+// console.log(lowestPrice);
+
+// let myWishlist = myProduct.filter((item) => (item.status === "wishlist"))
+// console.log(myWishlist);
+
+// let myCart = myProduct.filter((item) => (item.status === "cart"))
+// console.log(myCart);
+
+
+// ============================================== reduce mathod
+
+// let myArr = [1,2,3,4,5,6,7,8,9,10]
+
+// let myTotal = myArr.reduce( (acc, item) => (acc + item), 0)
+
+// -------------------or
+// let myTotal = myArr.reduce(function (acc, item) {
+//     return acc + item
+// }, 0)
+
+
+// console.log(myTotal);
+
+
+// how to use filter and reduce in cart system
+
+// let myProduct = [
+//     {SKU : "prod-0", price : 210, status : "cart"},
+//     {SKU : "prod-1", price : 120, status : "cart"},
+//     {SKU : "prod-2", price : 250, status : "wishlist"},
+//     {SKU : "prod-3", price : 100, status : "cart"},
+//     {SKU : "prod-4", price : 450, status : "cart"},
+//     {SKU : "prod-5", price : 300, status : "cart"},
+//     {SKU : "prod-6", price : 420, status : "wishlist"},
+//     {SKU : "prod-7", price : 260, status : "cart"},
+//     {SKU : "prod-8", price : 390, status : "cart"},
+//     {SKU : "prod-9", price : 500, status : "wishlist"}
+// ]
+
+// let myWishlist = myProduct.filter((item) => (item.status === "wishlist"))
+// console.log(myWishlist);
+
+// let myCart = myProduct.filter((item) => (item.status === "cart"))
+// console.log(myCart);
+
+// let chackOut = myCart.reduce((acc , product) => (acc + product.price), 0)
+// console.log(chackOut);
+
+// let chackOut = myProduct.reduce((acc , product) => (acc + product.price), 0)
+// console.log(chackOut);
