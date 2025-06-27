@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{background: #1c1c1c;color: #FFF;padding: 0;margin: 0;}
+    </style>
+</head>
+<body>
+    
+    <!-- <div class="parent">
+        <div class="child">One</div>
+        <div class="child">Two</div>
+        <div class="child">Three</div>
+        <div class="child">Four</div>
+        <div class="child">Five</div>
+    </div> -->
+    
+</body>
+
+<script>
+    const header = document.createElement("header")
+    header.id = "header"
+    header.className = "top-header"
+    header.setAttribute("title", "My top header, using js dom")
+    // header.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, minus sunt inventore in quo deserunt illo laudantium placeat, corporis iure corrupti fuga ipsam ratione reiciendis repellat repudiandae laborum. Facere, corrupti!"
+    // or use this
+    const addContent = document.createTextNode("Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, minus sunt inventore in quo deserunt illo laudantium placeat, corporis iure corrupti fuga ipsam ratione reiciendis repellat repudiandae laborum. Facere, corrupti!")
+    header.appendChild(addContent)
+    header.style.backgroundColor = "#ff4f00"
+    header.style.padding = "40px"
+    header.style.textAlign = "center"
+    header.style.fontSize = "40px"
+    header.style.fontWeight = "800"
+    header.style.lineHeight = "1.2"
+    header.style.color = "#FFF"
+
+    console.log(header);
+    
+    document.body.append(header)
+
+</script>
+
+
+<script>
+    // const parent = document.querySelector(".parent");
+    // console.log(parent);
+    // console.log(parent.children[1]);
+
+    // for (let i = 0; i < parent.children.length; i++) {
+    //     console.log(parent.children[i].innerHTML);
+    // }
+
+    // const firstChild = document.querySelector(".child");
+    // console.log(firstChild.parentElement);
+
+    // const addNew = document.createElement("div")
+    // addNew.className = "child"
+    // addNew.textContent = "six"
+    // firstChild.parentElement.appendChild(addNew)
+</script>
+
+</html>
+<!-- screen shot of DOM : https://prnt.sc/YqxUoX1uruer -->

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{background: #1c1c1c;color: #FFF;padding: 0;margin: 0;font-size: 22px;}
+    </style>
+</head>
+<body>
+
+    <!-- test #1 -->
+    <!-- <ul class="main">
+        <li class="sub">zero</li>
+        <li class="sub">one</li>
+        <li class="sub">two</li>
+        <li class="sub">three</li>
+        <li class="sub">four</li>
+        <li class="sub">five</li>
+    </ul> -->
+
+    <!-- test #3 -->
+     <ul class="numlist">
+        <li>Zero</li>
+     </ul>
+    
+    
+</body>
+
+<script>
+    
+    // test #1
+    // let main = document.querySelector(".main")
+    // console.log(main);
+    // console.log(main.children[5]);
+    // main.children[5].style.color = "pink"
+    
+    // for (let i = 0; i < main.children.length; i++) {
+        // console.log(main.children[i].style.color = "orange");
+    // }
+    // console.log(main.childNodes[1]);
+    // console.log(main.childNodes[2]);
+    // console.log(main.childNodes[3]);
+     
+
+
+
+
+
+    // test #2
+    // let create = document.createElement("h1")
+    // create.id = "head"
+    // create.className = "title"
+    // create.textContent = "Hello world !!!"
+    // create.setAttribute("title", "Create By baba")
+    // create.style.backgroundColor = "orange"
+    // console.log(create);
+    // document.body.appendChild(create)
+
+
+
+
+
+
+    // TEST #3
+    function addNum(numlist) {
+        let createNew = document.createElement("li");
+
+        // let text = document.createTextNode(`${numlist}`)
+        // createNew.appendChild(text)
+        // -----------------------------------OR
+        createNew.appendChild(document.createTextNode(`${numlist}`))
+
+        const locat = document.querySelector(".numlist")
+        locat.appendChild(createNew);
+    }
+    addNum("One");
+    addNum("Two");
+    addNum("Three");
+    addNum("Four");
+    addNum("Five");
+
+    // EDIT
+    // let edit = document.querySelector(".numlist")
+    // edit.children[5].textContent = "Ten"
+    // -----------------------------------OR
+    let editli = document.querySelector("li:last-child")
+    console.log(editli);
+    let myli = document.createElement("li")
+    myli.textContent = "I'm Five, but replace with Ten"
+    editli.replaceWith(myli)
+
+    // REMOVE
+    let edit = document.querySelector(".numlist")
+    edit.children[5].remove()
+    
+
+</script>
+
+</html>
+<!-- screen shot of DOM : https://prnt.sc/YqxUoX1uruer -->
