@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {margin: 0;padding: 0;border: 0;font-family: var(--Roboto-font-family);font-size: 100%;vertical-align: baseline;background: transparent;}
+article, aside, figure, footer, header, nav, section, details, summary {display: block;}
+
+html {-webkit-box-sizing: border-box;box-sizing: border-box;scroll-behavior: smooth;}
+*::-webkit-scrollbar {width: 7px;}
+*::-webkit-scrollbar-track {background-color: #999999;}
+*::-webkit-scrollbar-thumb {background: #000000;}
+* {scrollbar-color: #000000 #999999;scrollbar-width: thin;}
+
+*,*:before,*:after {-webkit-box-sizing: inherit;box-sizing: inherit;}
+
+:root {
+  --white: #FFFFFF;
+  --gray: #999999;
+  --dark: #000000;
+
+  --Roboto-font-family: 'Roboto', sans-serif;
+}
+:focus{outline: none !important;box-shadow: 0 0 0 1px rgba(0,0,0, 0.4) !important;border-color: #000000 !important;}
+
+img {max-width: 100%;height: auto;}
+/* ul {display: flex;flex-direction: column;list-style: none;gap: 10px;} */
+a {margin: 0;padding: 0;text-decoration: none;vertical-align: baseline;background: transparent;}
+a:focus, a:hover {text-decoration: none;vertical-align: baseline;background: transparent;}
+p{margin-bottom: 10px;}
+hr {display: block;height: 1px;border: 0;border-top: 1px solid #999999;margin: 0;padding: 0;}
+strong{font-weight: bold;}
+small{font-size: 80%;}
+label{font-size: 16px;font-weight: 600;}
+label span{color: #dc3545;}
+input, select {vertical-align: middle;}
+input, label, textarea, select, input, option, button {outline: none;}
+.form-check-input:checked{background-color: #000;border-color: #000;}
+
+table {width: 100%;background-color: #FFFFFF;border-collapse: collapse;border: 2px solid #000000;color: #000000;}
+table td {border: 2px solid #000000;padding: 5px;}
+table th {border: 2px solid #000000;padding: 5px;white-space: nowrap;}
+table thead {background-color: #000000;color: #FFFFFF;}
+.ht{display: none;font-size: 12px;line-height: 1;white-space: nowrap;}
+
+.button, .button:focus, .button:active {display: inline-block;font-size: 16px;font-weight: 600;background: #000000;color: #FFFFFF;line-height: 1;border: 1px solid transparent;border-radius: 5px;letter-spacing: .5;text-transform: uppercase;cursor: pointer;outline: none;padding: 10px 20px;transition: all 0.3s ease;-webkit-transition: all 0.3s ease;-moz-transition: all 0.3s ease;-ms-transition: all 0.3s ease;-o-transition: all 0.3s ease;}
+
+.button:hover, .button:focus {background: #000000;color: #FFFFFF;outline: none;transition: all 0.3s ease;-webkit-transition: all 0.3s ease;-moz-transition: all 0.3s ease;-ms-transition: all 0.3s ease;-o-transition: all 0.3s ease;}
+
+h1 {display: block;font-size: 48px;font-weight: 900;line-height: 1;margin-bottom: 20px;}
+h2 {display: block;font-size: 40px;font-weight: 900;line-height: 1;margin-bottom: 20px;}
+h3 {display: block;font-size: 32px;font-weight: 700;line-height: 1;margin-bottom: 15px;}
+h4 {display: block;font-size: 26px;font-weight: 700;line-height: 1;margin-bottom: 15px;}
+h5 {display: block;font-size: 22px;font-weight: 500;line-height: 1;margin-bottom: 10px;}
+h6 {display: block;font-size: 18px;font-weight: 500;line-height: 1;margin-bottom: 10px;}
+section{margin-bottom: 120px;}
+
+/* ul{list-style: none;} */
+
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  
+  margin: 0 auto;
+  background-color: #212121;
+}
+
+.lastResult {
+  color: white;
+  padding: 7px;
+}
+
+.guesses {
+  color: white;
+  padding: 7px;
+}
+
+button {
+  background-color: #141414;
+  color: #fff;
+  width: 250px;
+  height: 50px;
+  border-radius: 25px;
+  font-size: 30px;
+  border-style: none;
+  margin-top: 30px;
+  /* margin-left: 50px; */
+}
+
+#subt {
+  background-color: #161616;
+  color: #ffffff;
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 20px;
+  border-style: none;
+  margin-top: 50px;
+  /* margin-left: 75px; */
+}
+
+#guessField {
+  color: #000;
+  width: 250px;
+  height: 50px;
+  font-size: 30px;
+  border-style: none;
+  margin-top: 25px;
+
+  /* margin-left: 50px; */
+  border: 5px solid #6c6d6d;
+  text-align: center;
+}
+
+#guess {
+  font-size: 55px;
+  /* margin-left: 90px; */
+  margin-top: 120px;
+  color: #fff;
+}
+
+.guesses {
+  background-color: #7a7a7a;
+}
+
+#wrapper {
+  box-sizing: border-box;
+  text-align: center;
+  width: 450px;
+  height: 550px;
+  background-color: #474747;
+  color: #fff;
+  font-size: 25px;
+}
+
+h1 {
+  background-color: #161616;
+
+  color: #fff;
+  text-align: center;
+}
+
+p {
+  font-size: 16px;
+  text-align: center;
+}
+
+.resultParas{margin-top: 40px;}

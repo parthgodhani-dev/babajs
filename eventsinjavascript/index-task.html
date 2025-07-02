@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>GPT task</title>
+    <style>
+        body{margin: 0;padding: 0;color: #FFF;}
+    </style>
+</head>
+<body>
+    
+    
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex align-items-center justify-content-center text-center">
+                        <div id="gameBox">
+                            <h1>Number Guessing Game</h1>
+                            <p>Guess a number between 1 and 100</p>
+                            <p>You have 10 chances to win!</p>
+                        
+                            <form id="guessForm">
+                                <div class="d-flex flex-column align-items-center">
+                                    <label for="userGuess">Your Guess:</label>
+                                    <input type="number" id="userGuess">
+                                    <button id="submitGuess">Submit</button>
+                                </div>
+                            </form>
+                        
+                            <div id="info" class="mt-5">
+                                <p>Previous Guesses: <span id="guessList"></span></p>
+                                <p>Chances Left: <span id="chancesLeft">10</span></p>
+                                <p id="feedback"></p>
+                            </div>                  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    
+
+    <!-- bootstrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+
+    <script>
+        let randomNum = parseInt(Math.random() * 100 + 1);
+        
+        let guessInput = document.querySelector("#userGuess")
+        let submit = document.querySelector("#submitGuess")
+        let guessList = document.querySelector("#guessList")
+        let chancesLeft = document.querySelector("#chancesLeft")
+        let feedback = document.querySelector("#feedback")
+        let info = document.querySelector("#info")
+
+        const p = document.createElement('p');
+
+        let attempts = 0;
+        let previousGuesses = [];
+        let playGame = true;
+        
+        if(playGame){
+            submit.addEventListener("click", function(e){
+                e.preventDefault();
+                let guess = parseInt(guessInput.value)
+                validateGuess(guess)
+            })
+        }
+        
+        function validateGuess(guess) {
+            if(isNaN(guess) || guess < 1 || guess > 100){
+                alert("please enter number bitween 1 to 100")
+            } else {
+                previousGuesses.push(guess);
+                if (attempts === 10) {
+                    displayGuess(guess)
+                    displayMsg(`Game Over. Random number was ${randomNum}`)
+                    endGame()
+                } else {
+                    displayGuess(guess)
+                    checkGuess(guess)
+                }
+            }
+        }
+
+        function checkGuess(guess){
+            if(guess === randomNum){
+                displayMsg(`wow you win !!! you guessed Right`)
+            } else if(guess > randomNum) {
+                displayMsg(`you guess too High`)
+            } else if(guess < randomNum) {
+                displayMsg(`you guess too Low`)
+            }
+        }
+
+        function displayGuess(guess) {
+            guessInput.value = "";
+            guessInput.focus();
+            guessList.innerHTML += `${guess},  `;
+            attempts++;
+            chancesLeft.innerHTML = `${10 - attempts}`;
+        }
+        
+        function displayMsg(msg) {
+            feedback.innerHTML = `<h2>${msg}</h2>`;
+        }
+
+        function endGame() {
+            guessInput.value = ""
+            guessInput.setAttribute("disabled", "")
+            p.classList.add('button');
+            p.innerHTML = `<span id="newGame">Start new Game</span>`;
+            info.appendChild(p);
+            newGame();
+            playGame = false;
+        }
+
+        function newGame() {
+            let newGamebtn = document.querySelector("#newGame")
+            newGamebtn.addEventListener("click", function(e){
+                randomNum = parseInt(Math.random() * 100 + 1);
+                previousGuesses = [];
+                attempts = 0;
+                guessList.innerHTML = ""
+                feedback.innerHTML = ""
+                chancesLeft.innerHTML = `${10 - attempts}`;
+                guessInput.removeAttribute("disabled", "");
+                info.removeChild(p);
+                playGame = true;
+            })
+        }
+        
+
+        
+    </script>
+
+
+
+
+</body>
+</html>
