@@ -30,11 +30,11 @@ createProd.prototype.printMe = function(){
 const prod1 = new createProd("product1", 20)
 const prod2 = new createProd("product2", 40)
 
-// prod1.bhavvadharo()
-// prod1.printMe()
+prod1.bhavvadharo()
+prod1.printMe()
 
-// console.log(prod1);
-// console.log(prod2);
+console.log(prod1);
+console.log(prod2);
 
 
 /*
