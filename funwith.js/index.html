@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closure & lexical scope</title>
+</head>
+<body>
+    <body>
+        <button id="orange">Orange</button>
+        <button id="hotpink">hotpink</button>
+    </body>
+
+    <script>
+        // lexical scope :-
+        // let myName = "BABA";
+        // function outer(name) {
+        //     function inner(name) {
+        //         let lastName = "Godhani"
+        //         console.log(myName);
+        //     }
+        //     inner();
+        //     function innerNew(name) {
+        //         console.log(lastName);
+        //     }
+        //     innerNew()
+
+        //     console.log(lastName); // it's not working bcose child not pass other child only parants give child.
+
+        // }
+        // outer();
+    </script>
+    <script>
+        // Closure
+        // function outer() {
+        //     let name = "Baba";
+        //     function inner() {
+        //         console.log(name);
+        //     }
+        //     return inner;
+        // }
+        // const myName = outer();
+        // myName();
+
+    </script>
+
+    <script>
+
+        // document.querySelector("#orange").onclick = function () {
+        //     document.body.style.backgroundColor = "orange"
+        // }
+
+
+        function changeColor(color) { // it's give just value
+           return function() { // but onclick need function() thats the reasone
+                document.body.style.backgroundColor = `${color}`
+            }
+        }
+
+        document.querySelector("#orange").onclick = changeColor("orange");
+        document.querySelector("#hotpink").onclick = changeColor("hotpink");
+
+
+    </script>
+</body>
+</html>
