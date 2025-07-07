@@ -95,6 +95,75 @@
 // console.log(numList.sort(comper));
 
 
+
+
+
+
+
+"use strict";
+
+// Destructuring
+// let a, b, rest;
+// [a, b] = [10, 20]
+
+// console.log(a);
+// console.log(b);
+
+// [a, b, ...rest] = [10, 20, 30, 40, 50, 60]
+
+// console.log(rest);
+// let f = 60;
+
+// Handling API Data (Array)
+
+// const  userName = ["ravi", "pooja", "karan", "sunny", "july"];
+// const [name1, name2, ...other] = userName
+
+// console.log(name1);
+// console.log(name2);
+// console.log(other);
+
+
+
+// Swapping Variables
+// let a = 10, b = 20;
+// let x, y;
+// [x, y] = [a, b]; // right hand side is main in js 
+
+// console.log(x);
+// console.log(y);
+
+
+// Object Destructuring
+// const user = { name: "Parth", age: 21, country: "India" };
+// const { name, country } = user;
+
+// console.log(name);    // Parth
+// console.log(country); // India
+
+
+
+// Function Return Values
+// function colors(){
+//     return ["pink" , "hotpink"]
+// }
+
+// const [color1, color2] = colors()
+
+// console.log(color1);
+// console.log(color2);
+
+
+// task GPT
+// const playerScores = ["Ravi", 99, "Pooja", 89, "Karan", 78];
+// const [player1, scores1, player2, scores2, ...other] = playerScores;
+
+// console.log(player1, "scored", scores1);
+// console.log(player2, "scored", scores2);
+// console.log("Remaining", other);
+
+
+
 /*
 
 | **Method**       | **Purpose**                      | **Example**                                                                 |
